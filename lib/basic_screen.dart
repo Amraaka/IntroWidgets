@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:introwidgets/immutable_widget.dart';
+import 'package:introwidgets/text_layout.dart';
+// import 'package:introwidgets/immutable_widget.dart';
 
 class BasicScreen extends StatelessWidget {
   const BasicScreen({super.key});
@@ -11,16 +12,21 @@ class BasicScreen extends StatelessWidget {
         backgroundColor: Colors.blue,
         title: const Text("Demo app"),
         actions: [
-          const Padding(padding: EdgeInsets.all(10.0), child: Icon(Icons.edit)),
+          const Padding(padding: EdgeInsets.all(8.0), child: Icon(Icons.edit)),
         ],
       ),
-      body: Center(
-        child: const AspectRatio(aspectRatio: 1.0, child: ImmutableWidget()),
+      body: Column(
+        children: [
+          // AspectRatio(aspectRatio: 1.0, child: ImmutableWidget()),
+          Image.asset('/assets/images/colaroda.jpg'),
+
+          TextLayout(),
+        ],
       ),
       drawer: Drawer(
         child: Container(
           color: Colors.amber,
-          child: const Center(child: const Text("Hi drawer")),
+          child: const Center(child: Text("Hi drawer")),
         ),
       ),
     );
