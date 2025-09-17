@@ -18,7 +18,12 @@ class BasicScreen extends StatelessWidget {
       body: Column(
         children: [
           // AspectRatio(aspectRatio: 1.0, child: ImmutableWidget()),
-          Image.asset('/assets/images/colaroda.jpg'),
+          
+          Semantics(
+            image: true,
+            label: "Colorado business center",
+            child: Image.asset('assets/images/colaroda.jpg'),
+          ),
 
           TextLayout(),
         ],
